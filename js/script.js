@@ -26,4 +26,32 @@ Id  Name                Grades
 196 Luigi Grimaldello 	    68
 102 Piero della Francesca   50
 120 Francesca da Polenta    84
- */
+*/
+
+
+
+// Snak1
+
+//Prep
+
+// Variabili note
+const invited = ['Brad Pitt', 'Johnny Depp', 'Lady Gaga', 'Cristiano Ronaldo', 'Georgina Rodriguez', 'Chiara Ferragni', 'George Clooney', 'Amal Clooney', 'Fedez', 'Amadeus', 'Fiorello']
+
+// Dichiaro e inizzializzo la variabile per l'output
+let listXtypography = [];
+
+// Fase di Elaborazione
+// per ogni elemento nell'array invited
+invited.forEach((g, i) => {
+    //prendo l'elemento stesso(g), e il suo indice(i) dai parametri della funzione di callBack
+    guestListed = {
+    // creo un oggetto rappresentante l'elemento con le seguenti proprietà:
+                    tableName: 'Tavolo Vip',
+                    guestName: g,
+                    place: i + 1
+                  }
+    // aggiungo l'oggetto alla lista di output    
+    listXtypography.push(guestListed);
+});
+// Mostro l'output in console
+console.log(listXtypography);
