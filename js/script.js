@@ -222,15 +222,15 @@ let teams = [
                 {name:'Torino', score: 0, foul: 0}
               ];
 
-console.log(teams);          
-teams.forEach(({score, foul}) => {
-  console.log(randomNumbers(100));
-  console.log(score, foul);
-  score = randomNumbers(100);
-  foul = randomNumbers(20);
-  console.log(score, foul);
-  console.log(teams);
-  return score, foul;
+console.log('Le squadre e i loro dati sono i seguenti:')   
+teams.forEach(t => {
+  t.score = randomNumbers(100);
+  t.foul = randomNumbers(20);
 });
 console.log(teams);
+
+console.log('La lista delle squadre, con nome e numero di falli subiti:')
+console.log(teams.map(t => {
+  return {name:t.name, foul:t.foul}
+}));
 
