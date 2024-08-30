@@ -34,7 +34,7 @@ Id  Name                Grades
 
 //Prep
 
-
+/*
 // Variabili note
 const invited = ['Brad Pitt', 'Johnny Depp', 'Lady Gaga', 'Cristiano Ronaldo', 'Georgina Rodriguez', 'Chiara Ferragni', 'George Clooney', 'Amal Clooney', 'Fedez', 'Amadeus', 'Fiorello']
 
@@ -69,7 +69,7 @@ invited.forEach((g, i) => {
 });
 // Mostro l'output in console
 */
-console.log('La lista per la tipografia è la seguente' ,listXtypography);
+//console.log('La lista per la tipografia è la seguente' ,listXtypography);
 
 
 
@@ -135,7 +135,7 @@ const students = [
 
 
 // Versione col metodo .reduce()
-
+/*
 const listsStudents = students.reduce((acc, s) => {
     acc[0].push(s.name.toUpperCase());
     if (s.grades > 70) acc[1].push(s);
@@ -154,3 +154,39 @@ console.log(students.reduce((acc, s) => {
     if (s.grades > 70 && s.id > 120) acc[2].push(s);
     return acc;
 }, [[], [], []]));
+
+*/
+
+
+
+// Snack3
+
+// Prep
+
+// Variabili note
+const bikes = [
+                { name:'Specialized', weigth: 9},
+                { name:'Pinarello', weigth: 7},
+                { name:'BMC', weigth: 6.9},
+                { name:'SCOTT', weigth: 6.84},
+                { name:'Colnago', weigth: 7.2},
+                { name:'Bianchi', weigth: 6.8},
+              ];
+
+// Fase di elaborazione
+
+// Con il metodo reduce giro tutta la lista, e con 2 accumulatori monto il risultato finale.
+// il primo accumulatore servirà per cercare il peso minore tra i valori delle proprietà dell'oggetto(sinsolo elemento dell'array)
+// il secondo accumolatore è il messaggio vero e proprio da mostrare in console
+const result = bikes.reduce((acc, {name, weigth}) => {
+  if(weigth < acc[0]) {
+    acc[0] = weigth;    
+    acc[1] = `La bicicletta di marca ${name} è quella dal peso minore, di: ${acc[0]} kg.`;
+  }
+  return acc;
+}, [Infinity, '']);
+
+// Fase di output (in console)
+console.log('Tra la seguente lista di biciclette:', bikes);
+console.log(result[1]);
+
