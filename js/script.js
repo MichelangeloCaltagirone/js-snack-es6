@@ -30,7 +30,7 @@ Id  Name                Grades
 
 
 
-// Snack1
+// Snack 1
 
 //Prep
 
@@ -73,7 +73,7 @@ invited.forEach((g, i) => {
 
 
 
-// Snack2
+// Snack 2
 
 // Prep 
 
@@ -159,7 +159,7 @@ console.log(students.reduce((acc, s) => {
 
 
 
-// Snack3
+// Snack 3
 
 // Prep
 
@@ -178,6 +178,7 @@ const bikes = [
 // Con il metodo reduce giro tutta la lista, e con 2 accumulatori monto il risultato finale.
 // il primo accumulatore servirà per cercare il peso minore tra i valori delle proprietà dell'oggetto(sinsolo elemento dell'array)
 // il secondo accumolatore è il messaggio vero e proprio da mostrare in console
+
 const result = bikes.reduce((acc, {name, weigth}) => {
   if(weigth < acc[0]) {
     acc[0] = weigth;    
@@ -189,4 +190,47 @@ const result = bikes.reduce((acc, {name, weigth}) => {
 // Fase di output (in console)
 console.log('Tra la seguente lista di biciclette:', bikes);
 console.log(result[1]);
+
+
+
+
+// Snack 4
+
+/**
+ * *SNACK 4*
+Creare un array di oggetti di squadre di calcio.
+Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti.
+Nome sarà l’unica proprietà da compilare, le altre saranno tutte settate a 0.
+Generare numeri random al posto degli 0 nelle proprietà: punti fatti e falli subiti.
+Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
+
+ */
+
+/**Scaletta
+ * -creo array di dati (oggetti; prpietà: name:'', score: 0, foul: 0)
+ * -giro per tutta la lista di oggetti, assegnando valori random a tutte le propietà con valore di numero
+ * -creo nuovo array contenente le squadre tranne una loro propietà(score)
+ */
+
+let teams = [
+                {name:'Roma', score: 0, foul: 0},
+                {name:'Napoli', score: 0, foul: 0},
+                {name:'Palermo', score: 0, foul: 0},
+                {name:'Mantova', score: 0, foul: 0},
+                {name:'Saluzzo', score: 0, foul: 0},
+                {name:'Real Madrid', score: 0, foul: 0},
+                {name:'Torino', score: 0, foul: 0}
+              ];
+
+console.log(teams);          
+teams.forEach(({score, foul}) => {
+  console.log(randomNumbers(100));
+  console.log(score, foul);
+  score = randomNumbers(100);
+  foul = randomNumbers(20);
+  console.log(score, foul);
+  console.log(teams);
+  return score, foul;
+});
+console.log(teams);
 
