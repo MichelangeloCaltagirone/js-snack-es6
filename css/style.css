@@ -1,0 +1,16 @@
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+.squad, .score, .foul {
+    font-size: 20px;
+}
+.squad {
+    color: red;
+}
+.score {
+    color: green;
+}
+.foul {
+    color: blueviolet;
+}

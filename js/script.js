@@ -162,6 +162,9 @@ console.log(students.reduce((acc, s) => {
 // Snack 3
 
 // Prep
+//Recupero elementi dal DOM
+const listSnack3 = document.getElementById('snack3');
+const resultSnack3 = document.getElementById('resultSnack3');
 
 // Variabili note
 const bikes = [
@@ -172,7 +175,8 @@ const bikes = [
                 { name:'Colnago', weigth: 7.2},
                 { name:'Bianchi', weigth: 6.8},
               ];
-
+// Mostro in oagina la lista di partenza
+renderInPageBikes(bikes);
 // Fase di elaborazione
 
 // Con il metodo reduce giro tutta la lista, e con 2 accumulatori monto il risultato finale.
@@ -190,6 +194,8 @@ const result = bikes.reduce((acc, {name, weigth}) => {
 // Fase di output (in console)
 console.log('Tra la seguente lista di biciclette:', bikes);
 console.log(result[1]);
+// Fase di output in pagina
+resultSnack3.innerHTML = result[1];
 
 
 
@@ -211,7 +217,11 @@ Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengo
  * -giro per tutta la lista di oggetti, assegnando valori random a tutte le propietà con valore di numero
  * -creo nuovo array contenente le squadre tranne una loro propietà(score)
  */
-
+// Prep
+// Recupero elementi dal DOM
+const listSnack4 = document.getElementById('snack4');
+const resultSnack4 = document.getElementById('resultSnack4');
+// Variabili note
 let teams = [
                 {name:'Roma', score: 0, foul: 0},
                 {name:'Napoli', score: 0, foul: 0},
@@ -222,15 +232,20 @@ let teams = [
                 {name:'Torino', score: 0, foul: 0}
               ];
 
-console.log('Le squadre e i loro dati sono i seguenti:')   
-teams.forEach(t => {
+console.log('Le squadre e i loro dati sono i seguenti:');
+// aseegno tramite funzioni nuovi valori alle proprietà degli oggetti
+teams.forEach(t => {  // TODO da fare con il constructor
   t.score = randomNumbers(100);
   t.foul = randomNumbers(20);
 });
+
 console.log(teams);
+// Mostro in pagina la lista delle squadre e le loro informazioni
+renderInPageTeams(teams);
 
 console.log('La lista delle squadre, con nome e numero di falli subiti:')
-console.log(teams.map(t => {
+const teamsFoul = teams.map(t => {
   return {name:t.name, foul:t.foul}
-}));
+});
 
+renderTeamsFoul(teamsFoul);
