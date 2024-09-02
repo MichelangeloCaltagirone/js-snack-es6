@@ -176,13 +176,13 @@ const bikes = [
                 { name:'Bianchi', weigth: 6.8},
               ];
 // Mostro in oagina la lista di partenza
-renderInPageBikes(bikes);
+//renderInPageBikes(bikes);
 // Fase di elaborazione
 
 // Con il metodo reduce giro tutta la lista, e con 2 accumulatori monto il risultato finale.
 // il primo accumulatore servirà per cercare il peso minore tra i valori delle proprietà dell'oggetto(sinsolo elemento dell'array)
 // il secondo accumolatore è il messaggio vero e proprio da mostrare in console
-
+/*
 const result = bikes.reduce((acc, {name, weigth}) => {
   if(weigth < acc[0]) {
     acc[0] = weigth;    
@@ -232,6 +232,7 @@ let teams = [
                 {name:'Torino', score: 0, foul: 0}
               ];
 
+              /*
 console.log('Le squadre e i loro dati sono i seguenti:');
 // aseegno tramite funzioni nuovi valori alle proprietà degli oggetti
 teams.forEach(t => {  // TODO da fare con il constructor
@@ -249,3 +250,29 @@ const teamsFoul = teams.map(t => {
 });
 
 renderTeamsFoul(teamsFoul);
+*/
+
+/**
+ * ES6 Snack 5
+A partire da un array di stringhe, crea un secondo array formattando le stringhe del primo array in minuscolo e con l'iniziale maiuscola.
+
+Es: ['pippo', 'PLUTO', 'Paperino'] => ['Pippo', 'Pluto', 'Paperino']
+ */
+
+// prep
+
+// variabili note 
+let names = ['pippo', 'PLUTO', 'Paperino'];
+
+
+
+for ( let i = 0; i < names.length; i++) {
+  // Primo step: formatto tutte le lettere in minuscolo
+  names[i] = names[i].toLowerCase();
+  console.log(names[i]);
+  // Ricostruisco la formattazione che mi serve: con charAt(0) e poi upperCase, prendo la prima lettera e la capitolizzo
+  // poi con slice(1) riprendo la parola e la monto con la sua parte restante dopo la prima lettera
+  names[i] = names[i].charAt(0).toUpperCase() + names[i].slice(1);
+};
+
+console.log(names);
