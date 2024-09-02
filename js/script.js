@@ -334,11 +334,11 @@ const persons = [
   {name: 'Jimi', surname: 'Hendrix', age: 102}
 ];
 
-let personsCanDrive = [];
+let personsCanDrive = [];   // TODO era meglio il metodo .map()
 persons.forEach(({name, surname, age}) => {
   const canDrive = age < 18 || age > 68 ? 'non ': '';
   personsCanDrive.push(`La persona di nome ${name} e cognome ${surname},${canDrive} può guidare, avendo ${age} anni.`);
-  console.log(`La persona di nome ${name} e cognome ${surname}, e ${canDrive} può guidare, avendo ${age} anni.`);
+  //console.log(`La persona di nome ${name} e cognome ${surname}, e ${canDrive} può guidare, avendo ${age} anni.`);
 });
 
 console.log(persons);
