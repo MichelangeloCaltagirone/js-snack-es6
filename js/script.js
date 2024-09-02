@@ -261,7 +261,8 @@ Es: ['pippo', 'PLUTO', 'Paperino'] => ['Pippo', 'Pluto', 'Paperino']
 
 // prep
 
-// variabili note 
+// variabili note
+/* 
 let names = ['pippo', 'PLUTO', 'Paperino'];
 
 
@@ -276,3 +277,43 @@ for ( let i = 0; i < names.length; i++) {
 };
 
 console.log(names);
+
+*/
+
+//ES6 Snack 6
+/*
+Crea un array di oggetti che rappresentano degli animali.
+Ogni animale ha un nome, una famiglia e una classe.
+Es:
+[
+  { nome: 'leone', famiglia: 'felidi', classe: 'mammiferi' },
+  { nome: 'cane', famiglia: 'canidi', classe: 'mammiferi' },
+  { nome: 'gallina', famiglia: 'fasianidi', classe: 'uccelli' },
+]
+Crea un nuovo array con la lista dei mammiferi.
+*/
+
+const animals = [
+  { nome: 'leone', famiglia: 'felidi', classe: 'mammiferi' },
+  { nome: 'cane', famiglia: 'canidi', classe: 'mammiferi' },
+  { nome: 'cobra', famiglia: 'serpenti', classe: 'sangueFreddo'},
+  { nome: 'rinoceronte', famiglia: 'corazzati', classe: 'mammiferi'},
+  { nome: 'ippopotamo', famiglia: 'acquatici', classe: 'mammiferi'},
+  { nome: 'drago', famiglia: 'dragonidi', classe: 'uccelli'},
+  { nome: 'moffetta', famiglia: 'castoridi', classe: 'mammiferi'},
+  { nome: 'cane', famiglia: 'canidi', classe: 'mammiferi'},
+  { nome: 'squalo', famiglia: 'squalidi', classe: 'pesci'},
+  { nome: 'medusa', famiglia: 'invertebrati', classe: 'pesci'}
+]
+console.log(animals);
+let mammiferi = [];
+for (const animal of animals) {
+  if (animal.classe == 'mammiferi') mammiferi.push(animal);
+};
+console.log(mammiferi);
+
+const mammiferix = animals.filter(a => a.classe == 'mammiferi');
+console.log(mammiferix);
+
+
+// ES6 Snack 7 
