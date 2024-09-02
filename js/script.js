@@ -163,10 +163,11 @@ console.log(students.reduce((acc, s) => {
 
 // Prep
 //Recupero elementi dal DOM
-const listSnack3 = document.getElementById('snack3');
-const resultSnack3 = document.getElementById('resultSnack3');
+// const listSnack3 = document.getElementById('snack3');
+// const resultSnack3 = document.getElementById('resultSnack3');
 
 // Variabili note
+/*
 const bikes = [
                 { name:'Specialized', weigth: 9},
                 { name:'Pinarello', weigth: 7},
@@ -175,7 +176,7 @@ const bikes = [
                 { name:'Colnago', weigth: 7.2},
                 { name:'Bianchi', weigth: 6.8},
               ];
-// Mostro in oagina la lista di partenza
+// Mostro in pagina la lista di partenza
 //renderInPageBikes(bikes);
 // Fase di elaborazione
 
@@ -209,8 +210,8 @@ Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti.
 Nome sarà l’unica proprietà da compilare, le altre saranno tutte settate a 0.
 Generare numeri random al posto degli 0 nelle proprietà: punti fatti e falli subiti.
 Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
-
- */
+*/
+ 
 
 /**Scaletta
  * -creo array di dati (oggetti; prpietà: name:'', score: 0, foul: 0)
@@ -219,9 +220,10 @@ Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengo
  */
 // Prep
 // Recupero elementi dal DOM
-const listSnack4 = document.getElementById('snack4');
-const resultSnack4 = document.getElementById('resultSnack4');
+//const listSnack4 = document.getElementById('snack4');
+//const resultSnack4 = document.getElementById('resultSnack4');
 // Variabili note
+/*
 let teams = [
                 {name:'Roma', score: 0, foul: 0},
                 {name:'Napoli', score: 0, foul: 0},
@@ -250,7 +252,7 @@ const teamsFoul = teams.map(t => {
 });
 
 renderTeamsFoul(teamsFoul);
-*/
+
 
 /**
  * ES6 Snack 5
@@ -292,7 +294,7 @@ Es:
 ]
 Crea un nuovo array con la lista dei mammiferi.
 */
-
+/*
 const animals = [
   { nome: 'leone', famiglia: 'felidi', classe: 'mammiferi' },
   { nome: 'cane', famiglia: 'canidi', classe: 'mammiferi' },
@@ -314,7 +316,7 @@ console.log(mammiferi);
 
 const mammiferix = animals.filter(a => a.classe == 'mammiferi');
 console.log(mammiferix);
-
+*/
 
 // ES6 Snack 7 
 /* 
@@ -324,7 +326,7 @@ Ogni persona ha un nome, un cognome e un'età.
 Crea quindi un nuovo array inserendo, per ogni persona, una frase con il nome e cognome
 e l'indicazione se può guidare, in base all'età.
 */
-
+/*
 const persons = [
   {name: 'Pippo', surname: 'Nostrum', age: 22},
   {name: 'Pluto', surname: 'Regan', age: 6},
@@ -343,3 +345,4 @@ persons.forEach(({name, surname, age}) => {
 
 console.log(persons);
 console.log(personsCanDrive);
+*/

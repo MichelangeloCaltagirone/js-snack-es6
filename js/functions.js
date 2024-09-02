@@ -24,7 +24,7 @@ const renderInPageTeams = (array) => {
 };
 
 const renderTeamsFoul = (array) => {
-    array.forEach(x => {
-        resultSnack4.innerHTML += `<li>- Nome squadra: <span class='squad'>${x.name}</span> - Falli subiti: <span class='foul'>${x.foul}</span></li>`;
+    array.forEach(({name, foul}) => {
+        resultSnack4.innerHTML += `<li>- Nome squadra: <span class='squad'>${name}</span> - Falli subiti: <span class='foul'>${foul}</span></li>`;
     });
 };
