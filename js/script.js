@@ -317,3 +317,29 @@ console.log(mammiferix);
 
 
 // ES6 Snack 7 
+/* 
+Crea un array di oggetti che rappresentano delle persone.
+Ogni persona ha un nome, un cognome e un'età.
+
+Crea quindi un nuovo array inserendo, per ogni persona, una frase con il nome e cognome
+e l'indicazione se può guidare, in base all'età.
+*/
+
+const persons = [
+  {name: 'Pippo', surname: 'Nostrum', age: 22},
+  {name: 'Pluto', surname: 'Regan', age: 6},
+  {name: 'Sofia', surname: 'Latium', age: 18},
+  {name: 'Gian', surname: 'Pietro', age: 7},
+  {name: 'Tom', surname: 'Waits', age: 45},
+  {name: 'Jimi', surname: 'Hendrix', age: 102}
+];
+
+let personsCanDrive = [];
+persons.forEach(({name, surname, age}) => {
+  const canDrive = age < 18 || age > 68 ? 'non ': '';
+  personsCanDrive.push(`La persona di nome ${name} e cognome ${surname},${canDrive} può guidare, avendo ${age} anni.`);
+  console.log(`La persona di nome ${name} e cognome ${surname}, e ${canDrive} può guidare, avendo ${age} anni.`);
+});
+
+console.log(persons);
+console.log(personsCanDrive);
